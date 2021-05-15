@@ -1,0 +1,224 @@
+
+ .materias{ 
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.contenedor{
+    width: 50%;
+    border: none; 
+    position: fixed;
+    bottom: 30%;
+    right: 30%;
+    border-radius: 6%;
+    animation-name: animacion;
+    animation-duration: 4s;
+    background-color: rgb(229, 231, 220);
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgb(160, 170, 180);
+}
+
+@keyframes animacion{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.bCerrar{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end; 
+
+}
+.form{
+    justify-content: flex-start;
+    align-items: left;
+    display: flex; 
+}
+
+input[type=button]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.cerrar{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    background-color: rgb(236, 42, 42);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=text],input[type=number],input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+
+
+input[type = button]:hover{
+    background-color: rgb(132, 236, 111);
+}
+#btnElininar{
+    background-color: #e62c14;
+}
+input[type=reset]{
+    color: white;
+    padding: 16px 22px;
+    margin: 0 0;
+    border: none;
+    width: 30%;
+    background-color: #398a3c;
+    cursor: pointer;
+}
+
+input[type = reset]:hover{
+    background-color: rgb(137, 158, 128);
+}
+
+.sinError{
+    border: 1px solid #f0eded;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.contenedorTabla{
+    position: relative;
+}
+
+#contenedor1 {
+    display: flex;
+    background-color: #ddd;
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#contenedor2 {
+    display: flex;
+    background-color: rgb(170, 216, 170);
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga{
+    background-color: rgba(250,240,2450,0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 14px solid rgb(240, 233, 233);
+    border-top-color: #7526f4;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}  
+  
+}
+
+/*** tabla ***/
+.padre {
+    background: rgba(20, 8, 6, 0.199);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hijo {
+    background: rgb(200, 219, 203);
+    width: 99%;
+    height: 98%;
+  }
+
+tr:nth-child(even){
+    background-color: #d5f187;
+    color: rgb(73, 71, 71);
+}
+
+th{
+    background-color: lightseagreen;
+    color: white;
+        
+}
+
+/*table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid rgb(26, 25, 25);
+ }*/
+/*La tabla Ocupa el 100% de la pantalla y unifica el color de las columnas*/
+#table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    cursor: pointer;
+ }
+
+ th, td {
+    width: 25%;
+    text-align: center;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid rgb(12, 12, 12);
+    border-collapse: collapse;
+ }
+ 
+
+ 
+
